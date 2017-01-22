@@ -35,5 +35,12 @@ class ColorsTest extends PHPUnit_Framework_TestCase
 
         print PhpAnsiColor::set("Inverse if the above.", "black_bg+green+underline+bold+inverse");
         print "\n";
+
+        print PhpAnsiColor::replace("This is the full text. Full should be red.", 'full', 'red');
+        print "\n";
+        
+        print PhpAnsiColor::replace("This is the full text. Full should be red. Also FuLl is no case insesnitive.", 'full', 'red', 'i');
+        print "\n";
+
     }
 }

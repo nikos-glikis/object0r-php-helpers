@@ -70,13 +70,13 @@ class PhpAnsiColor
         error_log(self::set($message, $color));
     }
 
-    public static function replace($full_text, $search_regexp, $color)
+    public static function replace($full_text, $search_regexp, $color, $regExprFlags = '')
     {
         $new_text = preg_replace_callback(
-            "/($search_regexp)/",
+            "/($search_regexp)/$regExprFlags",
             function ($matches) use ($color)
             {
-                return Color::set($matches[1], $color);
+                return PhpAnsiColor::set($matches[1], $color);
             },
             $full_text
         );
