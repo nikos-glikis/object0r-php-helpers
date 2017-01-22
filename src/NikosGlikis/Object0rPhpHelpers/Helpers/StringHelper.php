@@ -25,6 +25,9 @@ class StringHelper
     /**
      * Cuts full text to the latest keyword that exists in the text.
      * For example if text is: "My fox is blue and my light is white" and keywords = {'blue','light'} the return value is: "is white"
+     *
+     * It extracts the smallest possible text.
+     *
      * @param $fullText
      * @param $keywords
      * @return string

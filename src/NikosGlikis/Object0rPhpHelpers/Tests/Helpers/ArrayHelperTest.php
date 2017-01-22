@@ -1,5 +1,5 @@
 <?php
-namespace NikosGlikis\Object0rPhpHelpers\Tests\Cli;
+namespace NikosGlikis\Object0rPhpHelpers\Tests\Helpers;
 
 use NikosGlikis\Object0rPhpHelpers\Helpers\ArrayHelper;
 use PHPUnit_Framework_TestCase;
