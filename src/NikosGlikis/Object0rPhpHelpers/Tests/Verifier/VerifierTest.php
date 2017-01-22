@@ -6,9 +6,6 @@ use PHPUnit_Framework_TestCase;
 
 class VerifierTest extends PHPUnit_Framework_TestCase
 {
-    // ...
-
-    
     public function testIsArrayFullOf()
     {
         $array = array();
