@@ -17,5 +17,8 @@
       "NikosGlikis\\Object0rPhpHelpers": "src/"
     }
   },
-  "minimum-stability": "stable"
+  "minimum-stability": "stable",
+  "require": {
+    "phpunit/phpunit": "^5.7"
+  }
 }
