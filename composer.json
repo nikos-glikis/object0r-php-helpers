@@ -1,0 +1,21 @@
+{
+  "name": "nikosglikis/object0r-php-helpers",
+  "description": "PHP Helpers Collection",
+  "license": "GPL-3.0+",
+  "version": "1.0.0-stable",
+  "keywords": [
+    "object0r-php-helpers"
+  ],
+  "authors": [
+    {
+      "name": "Nikos Glikis",
+      "email": "nikosglikis@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "": "src/"
+    }
+  },
+  "minimum-stability": "stable"
+}
