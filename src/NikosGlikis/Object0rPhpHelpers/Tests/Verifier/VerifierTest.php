@@ -1,4 +1,5 @@
 <?php
+
 namespace NikosGlikis\Object0rPhpHelpers\Tests\Verifier;
 
 use NikosGlikis\Object0rPhpHelpers\Helpers\Verifier;
@@ -30,5 +31,11 @@ class VerifierTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(false, Verifier::isArrayFullOf($array, DerivedClass::class));
         $this->assertEquals(false, Verifier::isArrayFullOf($array, BaseClass::class));
         $this->assertEquals(false, Verifier::isArrayFullOf($array, BaseClass::class, false));
+    }
+
+    function testValidJson()
+    {
+        $this->assertTrue(!Verifier::isValidJson('not valid json'));
+        $this->assertTrue(Verifier::isValidJson('{"testval":"prod","testval2":"prod"}'));
     }
 }

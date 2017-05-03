@@ -1,4 +1,5 @@
 <?php
+
 namespace NikosGlikis\Object0rPhpHelpers\Helpers;
 
 class Verifier
@@ -10,20 +11,27 @@ class Verifier
      */
     static function isArrayFullOf(array $array, $type, $allowDerived = true)
     {
-        foreach ($array as $item)
-        {
+        foreach ($array as $item) {
             //TODO Primitive Types
-            if (!$item instanceof $type)
-            {
+            if (!$item instanceof $type) {
                 return false;
-            }
-
-            else if (!$allowDerived && is_subclass_of($item, $type))
-            {
+            } else if (!$allowDerived && is_subclass_of($item, $type)) {
                 return false;
             }
         }
         return true;
+    }
+
+    /**
+     * Returns true if input is valid json, false otherwise.
+     *
+     * @param $string
+     * @return bool
+     */
+    public static function isValidJson($string)
+    {
+        json_decode($string);
+        return (json_last_error() == JSON_ERROR_NONE);
     }
 }
 
