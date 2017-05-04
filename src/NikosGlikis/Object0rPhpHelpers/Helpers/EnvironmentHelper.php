@@ -2,9 +2,8 @@
 
 namespace NikosGlikis\Object0rPhpHelpers\Helpers;
 
-use PHPUnit_Framework_TestCase;
 
-class EnvironmentHelper extends PHPUnit_Framework_TestCase
+class EnvironmentHelper
 {
     static function isCommandLineInterface()
     {
