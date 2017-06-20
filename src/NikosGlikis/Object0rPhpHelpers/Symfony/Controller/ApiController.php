@@ -15,7 +15,6 @@ class ApiController extends CustomSymfonyController
      */
     protected function containerInitialized()
     {
-        var_dump('child');
         parent::containerInitialized();
         session_write_close();
     }

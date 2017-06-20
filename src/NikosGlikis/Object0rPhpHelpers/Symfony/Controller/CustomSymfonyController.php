@@ -32,7 +32,6 @@ class CustomSymfonyController extends Controller
      */
     protected function containerInitialized()
     {
-        var_dump('parent');
         $this->_boot_time = microtime(TRUE);
         $this->_boot_memory = memory_get_usage();
     }
