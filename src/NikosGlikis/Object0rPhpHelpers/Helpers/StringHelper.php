@@ -60,6 +60,32 @@ class StringHelper
         return $fullText;
     }
 
+    /**
+     * @param $start
+     * @param $end
+     * @param $fullString
+     * @return string
+     * @throws \Exception
+     */
+    static function getStringBetween($start, $end, $fullString)
+    {
+        if (!StringHelper::stringContains($fullString, $start))
+        {
+            throw new \Exception('"' . $start . '" is not contained in text.');
+        }
+        if (!StringHelper::stringContains($fullString, $end))
+        {
+            throw new \Exception('"' . $end . '" is not contained in text.');
+        }
+        $fullString = substr($fullString, strpos($fullString, $start)+strlen($start), strlen($fullString));
+        if (!StringHelper::stringContains($fullString, $end))
+        {
+            throw new \Exception('Cannot find "' . $end . '" after "' . $start . '"');
+        }
+
+        return substr($fullString, 0, strpos($fullString, $end));
+    }
+
 }
 
 ?>
