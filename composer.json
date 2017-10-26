@@ -2,7 +2,7 @@
   "name": "nikosglikis/object0r-php-helpers",
   "description": "PHP Helpers Collection",
   "license": "GPL-3.0+",
-  "version": "1.0.10-stable",
+  "version": "1.0.12-stable",
   "keywords": [
     "object0r-php-helpers"
   ],
@@ -13,6 +13,9 @@
     }
   ],
   "autoload": {
+    "files": [
+      "src/NikosGlikis/Object0rPhpHelpers/Basic.php"
+    ],
     "psr-0": {
       "NikosGlikis\\Object0rPhpHelpers": "src/"
     }
